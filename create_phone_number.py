@@ -1,14 +1,14 @@
 # first attempt
-# def create_phone_number(n):
-#     #your code here
-#     # => returns "(123) 456-7890"
-#     # iterate through list and append each number to string output
-#     # format output       
+def create_phone_number(n):
+    #your code here
+    # => returns "(123) 456-7890"
+    # iterate through list and append each number to string output
+    # format output       
                                                           
-#    return (f'({n[0]}{n[1]}{n[2]}) {n[3]}{n[4]}{n[5]}-{n[6]}{n[7]}{n[8]}{n[9]}')
+   return (f'({n[0]}{n[1]}{n[2]}) {n[3]}{n[4]}{n[5]}-{n[6]}{n[7]}{n[8]}{n[9]}')
 
 
-# create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 
 # second attempt
 
@@ -28,3 +28,14 @@ def create_phone_number(n):
 
 print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
+# Third attempt
+
+def create_phone_number(n):
+    # Step 1: Convert all digits to strings
+    digits = map(str, n)           # → '1', '2', '3', ...
+    
+    # Step 2: Join into one string
+    s = "".join(digits)           # → "1234567890"
+    
+    # Step 3: Format with f-string
+    return f"({s[:3]}) {s[3:6]}-{s[6:]}"

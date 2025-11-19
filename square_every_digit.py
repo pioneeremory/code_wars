@@ -8,14 +8,13 @@
 
 def square_this(num):
     list1 = (map(int, str(num)))   
-    new_answer = 0
+    new_answer = ''
 
     for i in list1:
         answer = (i **2)
-        new_answer += answer
+        new_answer += str(answer)
     return new_answer
         
-
-print(square_this(99))
+print(square_this(9119))
 
 
